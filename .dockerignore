@@ -1,0 +1,6 @@
+.git
+.nvmrc
+package.json
+.env*
+node_modules
+dist
