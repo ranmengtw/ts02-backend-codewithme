@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - deployment.yaml
+  - service.yaml
+  - sa.yaml
+labels:
+  - includeSelectors: true
+    pairs:
+      app.kubernetes.io/instance: shopping-api
+      app.kubernetes.io/name: shopping-api
