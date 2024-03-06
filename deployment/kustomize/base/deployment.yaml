@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shopping-api
+spec:
+  replicas: 1
+  template:
+    spec:
+      serviceAccountName: shopping-api
+      containers:
+        - name: shopping-api
+          image: "shopping-api:latest"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          env:
+            - name: APP_SERVER_PORT
+              value: "8080"
+          envFrom:
+            - configMapRef:
+                name: shopping-api
+            - secretRef:
+                name: shopping-api
+          livenessProbe:
+            httpGet:
+              path: /products
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /products
+              port: http

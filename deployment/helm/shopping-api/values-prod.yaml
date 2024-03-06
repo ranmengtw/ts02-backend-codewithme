@@ -1,0 +1,3 @@
+configs:
+  DB_USER: prodrw
+  DB_HOST: trainingdb.sh9qggf.mongodb.net
