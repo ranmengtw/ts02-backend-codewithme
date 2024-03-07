@@ -1,6 +1,4 @@
-# Dependencies Image
 ARG NODE_VERSION=20
-# Have to use non-slim version of node to install dependancies
 FROM node:$NODE_VERSION-alpine AS build
 
 WORKDIR /usr/src/app
