@@ -6,6 +6,7 @@ const config: Config = {
   transform: {
     "^.+\\.ts$": "ts-jest",
   },
+  passWithNoTests: true,
 };
 
 export default config;

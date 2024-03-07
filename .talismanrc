@@ -1,5 +1,6 @@
 threshold: medium
 fileignoreconfig:
-  - filename: package-lock.json
-    ignore_detectors:
-      - filecontent
+- filename: yarn.lock
+  ignore_detectors:
+    - filecontent
+version: ""

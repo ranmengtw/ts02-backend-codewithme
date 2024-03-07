@@ -1,1 +1,1 @@
-npm run lint:fix && npm run deps && talisman -g pre-commit
+yarn lint:fix && yarn deps && talisman -g pre-commit
